@@ -35,7 +35,7 @@ class Tenda11N:
         postdata = {"Username": user, "checkEn": "0", "Password": pw}
 
         try:
-            res = session.post(url, headers=headers, data=postdata)
+            res = session.post(url, headers=headers, data=postdata, verify=False, timeout=15)
 
             if res:
                 if (res.text.find("Wrong password") == -1):
