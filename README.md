@@ -1,5 +1,5 @@
 # Tenda11N API
-Unofficial Tenda11N Router API for Python.
+Unofficial Tenda11N Router API for Python. Tested only on Tenda11N Sys Ver: V5.07.46_en.
 
 ## Features
 - Tracking of Network bandwith usage
