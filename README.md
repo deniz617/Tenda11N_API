@@ -27,7 +27,7 @@ for connection in networkStats:
 ```
 
 ## Existing Functions
-#### Note: Do not forget to add tenda11n_api. or as whatever you named the module in front of the functions before you call them.
+###### Note: Do not forget to add tenda11n_api. or as whatever you named the module in front of the functions before you call them.
 
 | Function(args)                                     | Function Description                                                           | Return value                                                     |
 |----------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|
