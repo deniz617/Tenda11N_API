@@ -27,3 +27,11 @@ for connection in networkStats:
 ```
 
 ## Existing Functions
+#### Note: Do not forget to add tenda11n_api. or as whatever you named the module in front of the functions before you call them.
+
+| login(user,pw)                                     | Logins to router, you have to call this function after first init.             | returns False on fail otherwise True                             |
+|----------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|
+| networkUsageStats()                                | Gets network usage stats about every connected device.                         | returns a dict with every ip as key. Returns empty dict on fail. |
+| getBandwithCtrl_List()                             | Gets bandwith control rules/list.                                              | Returns a array of rules.                                        |
+| setBandwithCtrl_List(bandwithCtrl_flag, ctrl_list) | Sets Bandwith control rules/list. (Get the list first and use it as reference) | Returns a array of new rules.                                    |
+| reboot()                                           | Reboots the router.                                                            | Returns nothing.                                                 |
