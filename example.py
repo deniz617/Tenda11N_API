@@ -6,7 +6,9 @@ import time
 api = tenda11n_api.Tenda11N() 
 
 # Login to router
-api.login("admin", "password") # Enter your own login credentials
+if not api.login("admin", "pass1234"): # Enter your own login credentials
+  print("Failed to login to router page")
+  exit()
 
 # Do Anything
 def printDict(_dict, key):
