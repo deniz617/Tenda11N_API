@@ -1,7 +1,7 @@
 import requests
 
 # Tenda11N Unofficial API
-# Ver: 1.0 (2019/11/01)
+# Ver: 1.0 (2019/11/02)
 # Credits: deniz.frosty@gmail.com | deniz617@github
 # Tested on Tenda11N Router, Sys Ver: V5.07.46_en
 
@@ -59,12 +59,12 @@ class Tenda11N:
 
         postdata = {"something"}
 
+        ip_table = {}
+
         try:
-            res = session.post(url, headers, postdata)
+            res = session.post(url, headers, postdata, verify=False, timeout=5)
 
             ip_tokens = res.text.split("\n")
-
-            ip_table = {}
 
             for ip in ip_tokens:
                 arg_split = ip.split(";")
@@ -86,7 +86,7 @@ class Tenda11N:
         }
 
         try:
-            res = session.get(url, headers=headers)
+            res = session.get(url, headers=headers, verify=False, timeout=5)
             if res:
                 return self.__extract_CtrlList_fromHTML(res.text)
         except:
@@ -114,7 +114,7 @@ class Tenda11N:
         }
 
         try:
-            res = session.get(url, headers=headers)
+            res = session.get(url, headers=headers, verify=False, timeout=5)
             if res:
                 return self.__extract_CtrlList_fromHTML(res.text)
         except:
